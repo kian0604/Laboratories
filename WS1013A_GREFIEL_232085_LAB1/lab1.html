@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume</title>
+</head>
+<body>
+
+  <div class="section" id="page1">
+    <h1>MICHEREE KIAN M. GREFIEL</h1>
+    <h2>Information Technology Student</h2>
+    <img src="grefiel.jpg" alt="Profile Photo" width="150">
+
+    <h3>About Me</h3>
+    <p>I am a hardworking and motivated IT student with a passion for learning and creating innovative solutions. I strive to improve my skills in technology, problem-solving, and creativity.</p>
+
+    <h3>Awards 🏅</h3>
+    <ul>
+      <li>Leadership Award</li>
+      <li>With Honors (High School)</li>
+      <li>Academic Excellence Award (Senior High)</li>
+      <li>Outstanding Performance Award</li>
+    </ul>
+  </div>
+
+  <div class="section" id="page2" style="display:none;">
+    <h2>Education 🎓</h2>
+    <p><b>University of Eastern Philippines (2023-2027)</b><br>BS in Information Technology</p>
+    <p><b>Senior High School (2021-2023)</b><br>STEM Strand</p>
+    <p><b>Junior High School (2017-2021)</b></p>
+  </div>
+
+  <div class="section" id="page3" style="display:none;">
+    <h2>Skills</h2>
+    <p>Computer Skills: 80%</p>
+    <p>Creativity: 85%</p>
+    <p>Communication: 90%</p>
+
+    <h2>Work Experience</h2>
+    <p><b>School Project Developer</b><br>
+    Created simple programs and presentations using basic programming language.</p>
+  </div>
+
+  <div>
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    let current = 0;
+
+    function showSection(index) {
+      sections.forEach((sec, i) => {
+        sec.style.display = i === index ? 'block' : 'none';
+      });
+
+      document.getElementById('prev').style.display = index === 0 ? 'none' : 'inline';
+      document.getElementById('next').style.display = index === sections.length - 1 ? 'none' : 'inline';
+    }
+
+    document.getElementById('prev').addEventListener('click', () => {
+      if(current > 0) current--;
+      showSection(current);
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+      if(current < sections.length - 1) current++;
+      showSection(current);
+    });
+
+    showSection(current);
+  </script>
+
+</body>
+</html>
