@@ -1,0 +1,7 @@
+[
+  { "symbol": "Apple", "price": 175, "volume": 120000, "sector": "Technology" },
+  { "symbol": "Google", "price": 2850, "volume": 95000, "sector": "Technology" },
+  { "symbol": "Amazon", "price": 3450, "volume": 110000, "sector": "E-commerce" },
+  { "symbol": "JPmorgan", "price": 160, "volume": 85000, "sector": "Finance" },
+  { "symbol": "Netflix", "price": 620, "volume": 99000, "sector": "Entertainment" }
+]
